@@ -1,0 +1,7 @@
+1. This is a hello kernel module.
+
+2. make -C /lib/modules/`uname -r`/build M=`pwd` modules
+
+3. sudo insmod hello.ko
+
+4. sudo rmmod hello
