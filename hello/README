@@ -1,7 +1,11 @@
 1. This is a hello kernel module.
 
-2. make -C /lib/modules/`uname -r`/build M=`pwd` modules
+2. sudo apt install linux-headers-`uname -r`
 
-3. sudo insmod hello.ko
+3. dpkg -L linux-headers-5.4.0-66-generic | grep "/lib/modules"
 
-4. sudo rmmod hello
+4. make -C /lib/modules/`uname -r`/build M=`pwd` modules
+
+5. sudo insmod hello.ko
+
+6. sudo rmmod hello
